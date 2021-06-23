@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">property</string>
+    <string name="select_your_city">Select Your City</string>
+    <string name="Property_Price_Calculator">propertypricecalculator</string>
+    <string name="property_price_calculator">Property Price Calculator</string>
+    <string name="button">button</string>
+    <string name="enter_your_locality">Enter your locality</string>
+    <string name="enter_the_locality">Enter the locality</string>
+    <string name="enter_area_in_sqft">Enter Area in sqft</string>
+    <string name="textview">TextView</string>
+    <string name="enter_the_area_in_sqft">Enter the Area in Sqft</string>
+    <string name="no_of_bedroom">No of Bedroom</string>
+    <string name="no_of_bathroom" />
+    <string name="no_of_bathroomm">No_of_bathroom</string>
+    <string name="no_of_bathroom0">No of Bathroom</string>
+    <string name="no_of_balcony">No of Balcony</string>
+    <string name="parking">Parking</string>
+    <string name="lift">Lift</string>
+    <string name="new_propert">New Propert</string>
+    <string name="new_property">New Property</string>
+    <string name="landmark_nearby">Landmark Nearby</string>
+    <string name="furnish_status">Furnish status</string>
+    <string name="house_type">House Type</string>
+    <string name="submit">Submit</string>
+</resources>

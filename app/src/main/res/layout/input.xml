@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/area"
+                android:layout_width="match_parent"
+                android:layout_height="25pt"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/curvetext"
+                android:hint="@string/enter_the_area_in_sqft"
+                android:textSize="25sp"
+                android:textColorHint="@drawable/fadeedittext"
+                android:textAlignment="center"
+                android:inputType="number"
+
+                android:importantForAutofill="no" />
+            <EditText
+                android:id="@+id/bedroom"
+                android:layout_width="match_parent"
+                android:layout_height="25pt"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/curvetext"
+                android:inputType="number"
+                android:layout_below="@+id/area"
+                android:layout_marginTop="15dp"
+                android:hint="@string/no_of_bedroom"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:textColorHint="@drawable/fadeedittext"
+                android:importantForAutofill="no" />
+            <EditText
+                android:id="@+id/bathroom"
+                android:layout_width="match_parent"
+                android:layout_height="25pt"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/curvetext"
+                android:inputType="number"
+                android:layout_below="@+id/bedroom"
+                android:layout_marginTop="15dp"
+                android:hint="@string/no_of_bathroom0"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:textColorHint="@drawable/fadeedittext"
+                android:importantForAutofill="no" />
+            <EditText
+                android:id="@+id/balcony"
+                android:layout_width="match_parent"
+                android:layout_height="25pt"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/curvetext"
+                android:inputType="number"
+                android:layout_below="@+id/bathroom"
+                android:layout_marginTop="15dp"
+                android:hint="@string/no_of_balcony"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:textColorHint="@drawable/fadeedittext"
+                android:importantForAutofill="no" />
+            <TextView
+                android:id="@+id/ptext"
+                android:layout_width="180dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/balcony"
+                android:text="@string/parking"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginStart="10sp"
+                android:textAlignment="center"
+                android:layout_marginTop="4dp"
+                />
+            <TextView
+                android:id="@+id/ltext"
+                android:layout_width="180dp"
+                android:layout_height="23dp"
+                android:layout_below="@id/balcony"
+                android:text="@string/lift"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10sp"
+                android:textAlignment="center"
+                android:layout_marginTop="4dp"
+                />
+            <Spinner
+                android:id="@+id/parking"
+                android:layout_width="180dp"
+                android:layout_height="23pt"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/curvetext"
+                android:textAlignment="center"
+                android:layout_below="@id/ptext" />
+            <Spinner
+                android:id="@+id/lift"
+                android:layout_width="180dp"
+                android:layout_height="23pt"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/curvetext"
+                android:textAlignment="center"
+                android:layout_below="@id/ltext"/>
+            <TextView
+                android:id="@+id/ntext"
+                android:layout_width="180dp"
+                android:layout_height="23dp"
+                android:layout_below="@id/parking"
+                android:text="@string/new_property"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginStart="10sp"
+                android:textAlignment="center"
+                android:layout_marginTop="4dp"
+                />
+            <TextView
+                android:id="@+id/latext"
+                android:layout_width="180dp"
+                android:layout_height="23dp"
+                android:layout_below="@id/lift"
+                android:text="@string/landmark_nearby"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10sp"
+                android:textAlignment="center"
+                android:layout_marginTop="4dp"
+                />
+            <Spinner
+                android:id="@+id/neworsell"
+                android:layout_width="180dp"
+                android:layout_height="23pt"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:background="@drawable/curvetext"
+                android:layout_below="@id/ntext" />
+            <Spinner
+                android:id="@+id/nearl"
+                android:layout_width="180dp"
+                android:layout_height="23pt"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:background="@drawable/curvetext"
+                android:layout_below="@id/latext"/>
+            <TextView
+                android:id="@+id/fstatus"
+                android:layout_width="180dp"
+                android:layout_height="23dp"
+                android:layout_below="@id/neworsell"
+                android:text="@string/furnish_status"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginStart="10sp"
+                android:textAlignment="center"
+                android:layout_marginTop="4dp"
+                />
+            <TextView
+                android:id="@+id/forb"
+                android:layout_width="180dp"
+                android:layout_height="23dp"
+                android:layout_below="@id/nearl"
+                android:text="@string/house_type"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10sp"
+                android:textAlignment="center"
+                android:layout_marginTop="4dp"
+                />
+            <Spinner
+                android:id="@+id/furnstat"
+                android:layout_width="180dp"
+                android:layout_height="23pt"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:background="@drawable/curvetext"
+                android:layout_below="@id/fstatus" />
+            <Spinner
+                android:id="@+id/htype"
+                android:layout_width="180dp"
+                android:layout_height="23pt"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:background="@drawable/curvetext"
+                android:layout_below="@id/forb"/>
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/furnstat"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:backgroundTint="@color/white"
+                android:text="@string/submit"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:layout_marginBottom="30dp"/>
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+
+</RelativeLayout>
