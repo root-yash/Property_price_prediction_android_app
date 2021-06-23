@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="580dp"
+        android:background="@color/white"
+        android:fontFamily="@font/boogaloo"
+        android:paddingVertical="20dp"
+        android:textStyle="bold"
+        android:text="@string/select_your_city"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="40sp" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/white">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+            <ImageButton
+                android:id="@+id/delhi"
+                android:layout_width="185dp"
+                android:layout_height="185dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="1dp"
+                android:background="@android:color/holo_blue_dark"
+                android:scaleType="centerInside"
+                android:src="@drawable/delhi"
+                app:layout_constraintBottom_toTopOf="@+id/bangalore"
+                app:layout_constraintEnd_toStartOf="@+id/mumbai"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/button"
+                />
+
+            <ImageButton
+                android:id="@+id/mumbai"
+                android:layout_width="185dp"
+                android:layout_height="185dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="1dp"
+                android:background="@android:color/holo_blue_dark"
+                android:scaleType="centerCrop"
+                android:src="@drawable/mumbai"
+                app:layout_constraintBottom_toTopOf="@+id/hyderabad"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/button"
+                />
+
+            <ImageButton
+                android:id="@+id/bangalore"
+                android:layout_width="185dp"
+                android:layout_height="185dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_below="@id/delhi"
+                android:background="@android:color/holo_blue_dark"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bangalore"
+                android:text="@string/select_your_city"
+                app:layout_constraintBottom_toTopOf="@+id/kolkata"
+                app:layout_constraintEnd_toStartOf="@+id/hyderabad"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/delhi"
+                android:contentDescription="@string/button"
+                />
+
+            <ImageButton
+                android:id="@+id/hyderabad"
+                android:layout_width="185dp"
+                android:layout_height="185dp"
+                android:layout_below="@id/delhi"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@android:color/holo_blue_dark"
+                android:scaleType="centerCrop"
+                android:src="@drawable/h1"
+                app:layout_constraintBottom_toTopOf="@+id/chennai"
+                app:layout_constraintTop_toBottomOf="@+id/mumbai"
+                android:contentDescription="@string/button"
+                />
+
+            <ImageButton
+                android:id="@+id/kolkata"
+                android:layout_width="185dp"
+                android:layout_height="185dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="62dp"
+                android:background="@android:color/holo_blue_dark"
+                android:scaleType="centerCrop"
+                android:layout_below="@id/bangalore"
+                android:src="@drawable/kolkata"
+                android:stretchMode="columnWidth"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/hyderabad"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bangalore"
+                tools:ignore="UnknownId"
+                android:contentDescription="@string/button"/>
+
+            <ImageButton
+                android:id="@+id/chennai"
+                android:layout_width="185dp"
+                android:layout_height="185dp"
+                android:layout_below="@id/bangalore"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="62dp"
+                android:background="@android:color/holo_blue_dark"
+                android:scaleType="centerCrop"
+                android:src="@drawable/chennai"
+                android:layout_alignParentEnd="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/kolkata"
+                app:layout_constraintTop_toBottomOf="@+id/hyderabad"
+                android:contentDescription="@string/button"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
