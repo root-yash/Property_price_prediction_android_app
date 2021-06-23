@@ -15,11 +15,13 @@
         android:ems="10"
         android:hint="@string/enter_the_locality"
         android:textColorHint="@drawable/fadeedittext"
-        android:inputType="textPostalAddress"
-        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:imeOptions="actionSearch"
         android:textAlignment="center"
         android:textSize="15pt"
-        android:importantForAutofill="no" />
+        android:importantForAutofill="no"
+        android:singleLine="true"
+        />
 
 
 

@@ -1,15 +1,15 @@
 package com.example.property;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
+import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -34,7 +34,7 @@ public class locality extends AppCompatActivity {
         RequestQueue requestQueue;
         requestQueue= Volley.newRequestQueue(getApplication().getApplicationContext());
         String host = "https://trueway-geocoding.p.rapidapi.com/Geocode?";
-        String x_rapidapi_key = "Enter Your Own api Key";
+        String x_rapidapi_key = "Enter Your own Key";
         String s = locality+","+city;
         String query = null;
         try {
@@ -55,7 +55,8 @@ public class locality extends AppCompatActivity {
 
                     }
 
-                }, error -> Log.d("myapp","something went wrong"));
+                }, error -> Toast.makeText(locality.this,"No Such Locality Exist in "+city,Toast.LENGTH_LONG).show());
+
         requestQueue.add(jsonObjectRequest);
 
     }
@@ -72,29 +73,29 @@ public class locality extends AppCompatActivity {
         Double lngmin=global.getLngmin();
         Double latmax=global.getLatmax();
         Double lngmax=global.getLngmax();
+
         editText.setOnKeyListener((v, keyCode, event) -> {
             if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
-                    (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    ((keyCode == KeyEvent.KEYCODE_ENTER) || (keyCode == EditorInfo.IME_NULL))) {
                 // Perform action on key press
                 String locality = String.valueOf(editText.getText());
-                InputMethodManager imm = (InputMethodManager)v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+                InputMethodManager imm = (InputMethodManager) v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
 
                 encoding(result -> {
-                    Double lat= result.getDouble("lat");
+                    Double lat = result.getDouble("lat");
                     Double lng = result.getDouble("lng");
-                    if(lat>latmin && lat<latmax && lng>lngmin && lng<lngmax){
+                    if (lat > latmin && lat < latmax && lng > lngmin && lng < lngmax) {
 
-                        Log.d("lnglat", String.valueOf(lat));
                         global.setLng(lng);
                         global.setLat(lat);
-                        Intent intent = new Intent(locality.this,gettingdata.class);
+                        Intent intent = new Intent(locality.this, gettingdata.class);
                         startActivity(intent);
                         finish();
+                    } else {
+                        Toast.makeText(locality.this, "No Such Locality Exist in " + city, Toast.LENGTH_LONG).show();
                     }
-                    else
-                        Toast.makeText(locality.this,"No Such Locality Exist in "+city,Toast.LENGTH_LONG).show();
-                },locality,city);
+                }, locality, city);
                 return true;
             }
             return false;
