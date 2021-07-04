@@ -1,1 +1,1 @@
-# Property_price_prediction_android_app
+# Property price prediction android app
