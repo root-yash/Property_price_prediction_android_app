@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:id="@+id/rl"
+<RelativeLayout android:id="@+id/rl"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -11,7 +13,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <EditText
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/area"
                 android:layout_width="match_parent"
                 android:layout_height="25pt"
@@ -20,13 +23,22 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/curvetext"
-                android:hint="@string/enter_the_area_in_sqft"
-                android:textSize="25sp"
-                android:textColorHint="@drawable/fadeedittext"
-                android:textAlignment="center"
-                android:inputType="number"
+                app:suffixText="Sqft">
 
-                android:importantForAutofill="no" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/areatxt"
+                    android:hint="@string/enter_area_in_sqft"
+                    android:background="@drawable/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
             <EditText
                 android:id="@+id/bedroom"
                 android:layout_width="match_parent"
@@ -38,8 +50,8 @@
                 android:layout_below="@+id/area"
                 android:layout_marginTop="15dp"
                 android:hint="@string/no_of_bedroom"
-                android:textAlignment="center"
-                android:textSize="25sp"
+                android:textSize="18sp"
+                android:paddingLeft="26dp"
                 android:textColorHint="@drawable/fadeedittext"
                 android:importantForAutofill="no" />
             <EditText
@@ -53,8 +65,8 @@
                 android:layout_below="@+id/bedroom"
                 android:layout_marginTop="15dp"
                 android:hint="@string/no_of_bathroom0"
-                android:textAlignment="center"
-                android:textSize="25sp"
+                android:paddingLeft="26dp"
+                android:textSize="18sp"
                 android:textColorHint="@drawable/fadeedittext"
                 android:importantForAutofill="no" />
             <EditText
@@ -68,10 +80,11 @@
                 android:layout_below="@+id/bathroom"
                 android:layout_marginTop="15dp"
                 android:hint="@string/no_of_balcony"
-                android:textAlignment="center"
-                android:textSize="25sp"
+                android:paddingLeft="26dp"
+                android:textSize="18sp"
                 android:textColorHint="@drawable/fadeedittext"
                 android:importantForAutofill="no" />
+
             <TextView
                 android:id="@+id/ptext"
                 android:layout_width="180dp"

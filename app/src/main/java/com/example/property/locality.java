@@ -34,7 +34,7 @@ public class locality extends AppCompatActivity {
         RequestQueue requestQueue;
         requestQueue= Volley.newRequestQueue(getApplication().getApplicationContext());
         String host = "https://trueway-geocoding.p.rapidapi.com/Geocode?";
-        String x_rapidapi_key = "Enter Your own Key";
+        String x_rapidapi_key = "Placeholder";
         String s = locality+","+city;
         String query = null;
         try {

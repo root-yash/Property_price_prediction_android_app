@@ -14,9 +14,16 @@ public class Priceoutput extends AppCompatActivity {
         glob global= (glob) getApplication();
         String price = global.getPrice();
         float i = Float.parseFloat(price);
-        String s1 = String.valueOf((int) i /100000);
+        String s;
+        if(i >9999999) {
+            String s1 = String.format("%.2f",i/10000000);
+            s = "House Price : " + s1 + " Crore";
+        }
+        else{
+            String s1 = String.valueOf((int) i / 100000);
+            s = "House Price : " + s1 + " Lakh";
+        }
         TextView priceoutput =findViewById(R.id.pricetext);
-        String s= "House Price : "+s1+"lacs";
         priceoutput.setText(s);
     }
 }

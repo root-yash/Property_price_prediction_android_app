@@ -20,7 +20,6 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
 public class gettingdata extends AppCompatActivity  {
 
     public Integer torf(String yon){
@@ -35,7 +34,7 @@ public class gettingdata extends AppCompatActivity  {
     }
     private void model(accmodel callback, String city, Integer area , Double lat , Double lng, Integer bed, Integer bath , Integer balcony , Integer resa ,Integer park , Integer furn , Integer lift, Integer land ,Integer flat){
         JSONObject inp = new JSONObject();
-        String auth="contact me";
+        String auth="Placeholder";
         try {
             inp.put("Auth",auth);
             inp.put("City",city);
@@ -80,7 +79,7 @@ public class gettingdata extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.input);
-        EditText areas =  findViewById(R.id.area);
+        EditText areas =  findViewById(R.id.areatxt);
         EditText bedrooms =  findViewById(R.id.bedroom);
         EditText bathrooms =  findViewById(R.id.bathroom);
         EditText balconys =  findViewById(R.id.balcony);
@@ -109,6 +108,7 @@ public class gettingdata extends AppCompatActivity  {
         landmarks.setAdapter(adapter);
         fstats.setAdapter(adapter2);
         flatorb.setAdapter(adapter3);
+
 
         areas.setOnKeyListener((v, keyCode, event) -> {
             if ((event.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)){
