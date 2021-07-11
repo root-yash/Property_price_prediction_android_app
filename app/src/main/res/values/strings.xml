@@ -22,4 +22,6 @@
     <string name="furnish_status">Furnish status</string>
     <string name="house_type">House Type</string>
     <string name="submit">Submit</string>
+    <string name="mlapi">placeholder</string>
+    <string name="geoapi">plceholder</string>
 </resources>

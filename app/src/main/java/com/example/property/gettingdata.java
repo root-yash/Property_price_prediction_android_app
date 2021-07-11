@@ -34,7 +34,7 @@ public class gettingdata extends AppCompatActivity  {
     }
     private void model(accmodel callback, String city, Integer area , Double lat , Double lng, Integer bed, Integer bath , Integer balcony , Integer resa ,Integer park , Integer furn , Integer lift, Integer land ,Integer flat){
         JSONObject inp = new JSONObject();
-        String auth="Placeholder";
+        String auth=getResources().getString(R.string.mlapi);
         try {
             inp.put("Auth",auth);
             inp.put("City",city);
